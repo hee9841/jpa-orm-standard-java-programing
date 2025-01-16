@@ -10,49 +10,52 @@ public class Main {
 
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
-        EntityManager em = emf.createEntityManager();
 
-        EntityTransaction tx = em.getTransaction();
-        tx.begin();
+        //cho02
+//        logic_ex1(emf);
 
-        try {
-            //ch02
-//            logic_ex1(em);
-
-            tx.commit();
-        } catch (Exception e) {
-            tx.rollback();
-        } finally {
-            em.close();
-        }
 
         emf.close();
     }
 
-    private static void logic_ex1(EntityManager em) {
-        //저장
-        Member member = new Member();
-        member.setId(1L);
-        member.setName("member1");
-        em.persist(member);
+    private static void logic_ex1(EntityManagerFactory emf) {
+
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction tx = em.getTransaction();
+
+        tx.begin();
+        try {
+            //저장
+            Member member = new Member();
+            member.setId(1L);
+            member.setName("member1");
+            em.persist(member);
 
 
-        //조회
-        Member findMember = em.find(Member.class, 1L);
-        System.out.println("member name: " + findMember.getName());
+            //조회
+            Member findMember = em.find(Member.class, 1L);
+            System.out.println("member name: " + findMember.getName());
 
-        //update
-        findMember.setName("newName");
-        Member findMember2 = em.find(Member.class, 1L);
-        System.out.println("update member name: " + findMember2.getName());
+            //update
+            findMember.setName("newName");
+            Member findMember2 = em.find(Member.class, 1L);
+            System.out.println("update member name: " + findMember2.getName());
 
 
-        //JPQL 전체 맴버 조회?? ->
-        List<Member> result = em.createQuery("select m from Member as m", Member.class)
-            .getResultList();
+            //JPQL 전체 맴버 조회?? ->
+            List<Member> result = em.createQuery("select m from Member as m", Member.class)
+                .getResultList();
 
-        for (Member m : result) {
-            System.out.println(m.getName());
+            for (Member m : result) {
+                System.out.println(m.getName());
+            }
+
+            tx.commit();
+
+        } catch (Exception e) {
+            tx.rollback();
+        } finally {
+            em.close();
         }
     }
 
