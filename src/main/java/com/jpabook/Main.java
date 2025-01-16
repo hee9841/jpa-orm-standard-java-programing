@@ -16,26 +16,8 @@ public class Main {
         tx.begin();
 
         try {
-            //저장
-//            logic_save(em);
-
-            //조회 & update
-//            Member findMember = em.find(Member.class, 1L);
-//            findMember.setName("newName");
-
-            //JPQL 전체 맴버 조회?? ->
-            List<Member> result = em.createQuery("select m from Member as m", Member.class)
-                .getResultList();
-
-            //페이ㅣ지 네이션 setFirtResult, setMasResults..
-
-            //테이블 대상이 아니라, 객체임
-            //sql -> 테이블 대상으로 쿼리
-            //jpql -> 객체 대상으로 쿼리, 객체지향 sql
-
-            for (Member m : result) {
-                System.out.println(m.getName());
-            }
+            //ch02
+//            logic_ex1(em);
 
             tx.commit();
         } catch (Exception e) {
@@ -47,10 +29,31 @@ public class Main {
         emf.close();
     }
 
-    private static void logic_save(EntityManager em) {
+    private static void logic_ex1(EntityManager em) {
+        //저장
         Member member = new Member();
         member.setId(1L);
         member.setName("member1");
         em.persist(member);
+
+
+        //조회
+        Member findMember = em.find(Member.class, 1L);
+        System.out.println("member name: " + findMember.getName());
+
+        //update
+        findMember.setName("newName");
+        Member findMember2 = em.find(Member.class, 1L);
+        System.out.println("update member name: " + findMember2.getName());
+
+
+        //JPQL 전체 맴버 조회?? ->
+        List<Member> result = em.createQuery("select m from Member as m", Member.class)
+            .getResultList();
+
+        for (Member m : result) {
+            System.out.println(m.getName());
+        }
     }
+
 }
