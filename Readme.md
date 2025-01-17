@@ -11,3 +11,4 @@
 ## *Summery of Contents*
 - ### [Chapter 01 JPA 소개]( https://github.com/hee9841/jpa-orm-standard-java-programing/tree/master/summary/ch01 )
 - ### [Chapter 02 JPA 시작]( https://github.com/hee9841/jpa-orm-standard-java-programing/tree/master/summary/ch02 )
+- ### [Chapter 03 영속성 관리]( https://github.com/hee9841/jpa-orm-standard-java-programing/tree/master/summary/ch03 )
