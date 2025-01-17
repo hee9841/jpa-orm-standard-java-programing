@@ -18,6 +18,15 @@ class Member {
     private String userName;
     private Integer age;
 
+    public Member(Long id, String userName) {
+        this.id = id;
+        this.userName = userName;
+    }
+
+    public Member() {
+
+    }
+
     public Long getId() {
         return id;
     }
@@ -40,5 +49,10 @@ class Member {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "id:" + id + ", " + "name: " + userName;
     }
 }
