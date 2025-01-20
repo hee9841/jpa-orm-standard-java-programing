@@ -12,8 +12,16 @@ public class Main {
         //cho02
 //        new Ch02Ex().logic_ex1(emf);
         //ch03
-        callCh3Ex(emf);
+//        callCh3Ex(emf);
 
+        //ch04
+        //ch04
+        Ch04Examples ch04Ex = new Ch04Examples(emf);
+        ch04Ex.strategyIdentity();
+        ch04Ex.strategy_Seq();
+        ch04Ex.strategy_Seq_allocation();
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        ch04Ex.strategy_Seq_allocation();
 
         emf.close();
     }
