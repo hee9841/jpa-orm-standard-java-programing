@@ -28,7 +28,7 @@
 3. H2 데이터베이스를 2.1.214 버전 또는 그 이상으로 사용해야한다.
 
 ## 1. H2 데이터베이스 설치
-![](./img/h2_ip.png)
+![](img/h2_ip.png)
 
 h2 콘솔을 실행하면 위에처럼 ip 주소로 나오는데 해당 ip를 localhost로 변경해준다.(다른 부분은 절대 변경하면 안된다.)   
 <img height="300" src="./img/h2_setting.png" width="400"/>
@@ -46,7 +46,7 @@ TCP로 다시 `jdbc:h2:tcp://localhost/~/test` 연결 해준다.
 > 해당 파일들을 삭제하지 않으면 프로젝트 설정 시 h2 드라이버 클래스를 로드할 수 없는 오류가 난다.
 
 ## 2. 프로젝트 설정 및 셋팅
-<img height="300" src="./img/project_setting.png" width="400"/>   
+<img height="300" src="img/project_setting.png" width="400"/>   
 
 - new Project -> java 선택 후 -> 빌드를 Maven으로 선택, 자바 버전 선택 -> 프로젝트 생성   
 
@@ -120,7 +120,7 @@ pom.xml에 라이브러리를 추가해준다.
 - 책에 있는 `hibernate.id.new_generator_mappings` 옵션은 Hibernate 6 이후 부터 deprecated되었다.
 
 #### 데이터베이스 방언(Dialect)
-<img height="300" src="./img/dialect.png" width="600"/>   
+<img height="300" src="img/dialect.png" width="600"/>   
 
 데이터베이스 밴더마다 제공하는 sql 문법, 함수가 조금식 달라서(타입, 함수, `페이징 처리`) DB를 교체하게 되면 
 코드 전체를 수정하는데 큰 어려움이 있다.
