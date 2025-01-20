@@ -20,7 +20,7 @@
 <!-- TOC -->
 --- 
 ## 1. 엔티티 매니저 팩토리와 엔티티 매니저
-<img src="./img/entityManger.png" height="300" width="400"/>
+<img src="img/entityManger.png" height="300" width="400"/>
 
 ### 엔티티 매니저 팩토리
 - 엔티티 매니저를 만드는 공장
@@ -97,7 +97,7 @@ public void entityLifeCycle(long memberId) {
 - 영속 상태의 엔티티는 모두 여기에 저장된다.
 - 1차 캐시의 key값은 엔티티의 식별자 값(데이터 베이스 기본키와 매핑되어 있다.)
 
-  <img height="300" src="./img/firstCache.png" width="400"/>
+  <img height="300" src="img/firstCache.png" width="400"/>
 - em.persist(member1)를 호출하면 db에 저장되는 것이 아니라 1차 캐시에 저장된다.
 
   <img height="300" src="img/firstCache_NotInCache.png" width="400"/>
@@ -182,11 +182,11 @@ memberA를 저장하는 insert sql 문을 생성해서 지연 SQL 저장소에 �
 ```
 위의 코드를 그림으로 살펴보면 다음과 같다.    
 
-<img src="./img/writeBehind_A.png" height="300" width="600"/> <img src="./img/writeBehind_B.png"  height="300" width="600"/>
+<img src="img/writeBehind_A.png" height="300" width="600"/> <img src="img/writeBehind_B.png"  height="300" width="600"/>
 
 - 1,2 :  memberA,  memberB를 1차캐시와 쓰기 지연 SQL 저장소에 저장한다.
 
-<img src="./img/writeBehind_trac.png" height="300" width="400"/>
+<img src="img/writeBehind_trac.png" height="300" width="400"/>
 
 - 트랜젝션을 commit하면 DB에 flush -> commit한다.
 
@@ -194,7 +194,7 @@ memberA를 저장하는 insert sql 문을 생성해서 지연 SQL 저장소에 �
 JPA로 엔티티를 수정할 때는 단순히 엔티티를 조회해서 데이터만 변경하면 된다.    
 그 이유는 영속성 컨텍스트의 1차 캐시에 스냅샷을 보관해서 그렇다. 여기서 스냅샷은 엔티티의 최초의 상태를 스냅샷으로 남겨둔 것을 말한다.
 
-<img src="./img/dirtyChecking.png" height="300" width="400"/>
+<img src="img/dirtyChecking.png" height="300" width="400"/>
 
 엔티티가 변경 감지 기능으로 수정되는 과정은 다음과 같다.
 0. 엔티티를 영속성 컨텍스트에 보관할 때, 최초 상태를 스냅샷으로 저장한다.
