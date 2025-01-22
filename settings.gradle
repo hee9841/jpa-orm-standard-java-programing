@@ -1,0 +1,3 @@
+rootProject.name = 'jpa-orm-book'
+include 'ch05-examples'
+include 'shop-practice'
