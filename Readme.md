@@ -13,3 +13,4 @@
 - ### [Chapter 02 JPA 시작]( https://github.com/hee9841/jpa-orm-standard-java-programing/tree/master/summary/ch02 )
 - ### [Chapter 03 영속성 관리]( https://github.com/hee9841/jpa-orm-standard-java-programing/tree/master/summary/ch03 )
 - ### [Chapter 04 엔티티 매핑]( https://github.com/hee9841/jpa-orm-standard-java-programing/tree/master/summary/ch04 )
+- ### [Chapter 05 연관관계 매핑 기초]( https://github.com/hee9841/jpa-orm-standard-java-programing/tree/master/summary/ch05 )

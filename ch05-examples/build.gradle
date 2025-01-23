@@ -1,0 +1,6 @@
+dependencies {
+    //hibernate
+    implementation 'org.hibernate.orm:hibernate-core:6.6.2.Final'
+    //h2
+    runtimeOnly 'com.h2database:h2:2.3.232'
+}
