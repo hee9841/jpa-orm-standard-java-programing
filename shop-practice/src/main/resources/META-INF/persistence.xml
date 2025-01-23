@@ -9,6 +9,9 @@
     <class>com.jpabook.jpashop.domain.Item</class>
     <class>com.jpabook.jpashop.domain.OrderItem</class>
     <class>com.jpabook.jpashop.domain.Order</class>
+    <class>com.jpabook.jpashop.domain.Category</class>
+    <class>com.jpabook.jpashop.domain.Delivery</class>
+
     <properties>
       <!-- 필수 속성 -->
       <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
