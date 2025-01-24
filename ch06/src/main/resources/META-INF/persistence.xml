@@ -6,6 +6,12 @@
   <persistence-unit name="ch06">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
+    <class>com.jpabook.ch06.domain.Member</class>
+    <class>com.jpabook.ch06.domain.Team</class>
+    <class>com.jpabook.ch06.domain.Locker</class>
+    <class>com.jpabook.ch06.domain.Product</class>
+    <class>com.jpabook.ch06.domain.Order</class>
+
     <properties>
       <!-- 필수 속성 -->
       <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
