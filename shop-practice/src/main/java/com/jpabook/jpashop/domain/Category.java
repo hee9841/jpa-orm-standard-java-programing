@@ -13,6 +13,7 @@ import jakarta.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Entity
@@ -25,6 +26,7 @@ public class Category {
 
     private String name;
 
+    @Setter
     @ManyToOne
     @JoinColumn(name = "PARENT_ID")
     private Category parent;
@@ -38,5 +40,16 @@ public class Category {
         inverseJoinColumns = @JoinColumn(name = "ITEM_ID")
     )
     private List<Item> items = new ArrayList<>();
+
+
+    //== 연관관계 ==/
+    public void addChildCategory(Category child) {
+        this.child.add(child);
+        child.setParent(parent);
+    }
+
+    public void addItem(Item item) {
+        items.add(item);
+    }
 
 }

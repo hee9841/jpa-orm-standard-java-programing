@@ -20,7 +20,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-@Setter
 @Entity
 @Table(name = "ORDERS") //db에 따라 order가 예약어로 되어있는 경우가 있어서 ORDERS로 많이 씀
 public class Order {
@@ -59,6 +58,11 @@ public class Order {
     public void addOrderItem(OrderItem orderItem) {
         orderItems.add(orderItem);
         orderItem.setOrder(this);
+    }
+
+    public void setDelivery(Delivery delivery) {
+        this.delivery = delivery;
+        delivery.setOrder(this);
     }
 
 

@@ -8,7 +8,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
 @Entity
 public class Delivery {
     @Id
@@ -26,7 +29,9 @@ public class Delivery {
     private DeliveryStatus status;
 
     //양방향
+    @Setter
     @OneToOne(mappedBy = "delivery")
     private Order order;
+
 
 }
