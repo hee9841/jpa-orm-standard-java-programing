@@ -18,6 +18,13 @@
     <class>com.jpabook.ch07.domain.board.Board</class>
     <class>com.jpabook.ch07.domain.board.BoardDetail</class>
 
+    <class>com.jpabook.ch07.domain.jointable.ManyToManyChild</class>
+    <class>com.jpabook.ch07.domain.jointable.ManyToManyParent</class>
+    <class>com.jpabook.ch07.domain.jointable.OneToManyJoinParent</class>
+    <class>com.jpabook.ch07.domain.jointable.OneToManyJoinChild</class>
+    <class>com.jpabook.ch07.domain.jointable.OneToOneJoinParent</class>
+    <class>com.jpabook.ch07.domain.jointable.OneToOneJoinChild</class>
+
     <properties>
       <!-- 필수 속성 -->
       <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
