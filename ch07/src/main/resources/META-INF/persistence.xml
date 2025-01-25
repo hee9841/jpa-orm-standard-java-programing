@@ -11,6 +11,13 @@
     <class>com.jpabook.ch07.domain.Movie</class>
     <class>com.jpabook.ch07.domain.BaseEntity</class>
 
+    <class>com.jpabook.ch07.domain.identifying.Child</class>
+    <class>com.jpabook.ch07.domain.identifying.Parent</class>
+    <class>com.jpabook.ch07.domain.identifying.ParentId</class>
+
+    <class>com.jpabook.ch07.domain.board.Board</class>
+    <class>com.jpabook.ch07.domain.board.BoardDetail</class>
+
     <properties>
       <!-- 필수 속성 -->
       <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
