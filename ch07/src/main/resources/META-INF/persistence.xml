@@ -5,6 +5,12 @@
 
   <persistence-unit name="ch07">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>com.jpabook.ch07.domain.Item</class>
+    <class>com.jpabook.ch07.domain.Book</class>
+    <class>com.jpabook.ch07.domain.Album</class>
+    <class>com.jpabook.ch07.domain.Movie</class>
+    <class>com.jpabook.ch07.domain.BaseEntity</class>
+
     <properties>
       <!-- 필수 속성 -->
       <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
