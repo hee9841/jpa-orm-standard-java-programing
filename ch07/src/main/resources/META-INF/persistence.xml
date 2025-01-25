@@ -3,24 +3,34 @@
   xmlns="https://jakarta.ee/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
 
-  <persistence-unit name="shop">
+  <persistence-unit name="ch07">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-    <class>com.jpabook.jpashop.domain.Member</class>
-    <class>com.jpabook.jpashop.domain.Item</class>
-    <class>com.jpabook.jpashop.domain.OrderItem</class>
-    <class>com.jpabook.jpashop.domain.Order</class>
-    <class>com.jpabook.jpashop.domain.Category</class>
-    <class>com.jpabook.jpashop.domain.Delivery</class>
-    <class>com.jpabook.jpashop.domain.Album</class>
-    <class>com.jpabook.jpashop.domain.Book</class>
-    <class>com.jpabook.jpashop.domain.Movie</class>
+    <class>com.jpabook.ch07.domain.Item</class>
+    <class>com.jpabook.ch07.domain.Book</class>
+    <class>com.jpabook.ch07.domain.Album</class>
+    <class>com.jpabook.ch07.domain.Movie</class>
+    <class>com.jpabook.ch07.domain.BaseEntity</class>
+
+    <class>com.jpabook.ch07.domain.identifying.Child</class>
+    <class>com.jpabook.ch07.domain.identifying.Parent</class>
+    <class>com.jpabook.ch07.domain.identifying.ParentId</class>
+
+    <class>com.jpabook.ch07.domain.board.Board</class>
+    <class>com.jpabook.ch07.domain.board.BoardDetail</class>
+
+    <class>com.jpabook.ch07.domain.jointable.ManyToManyChild</class>
+    <class>com.jpabook.ch07.domain.jointable.ManyToManyParent</class>
+    <class>com.jpabook.ch07.domain.jointable.OneToManyJoinParent</class>
+    <class>com.jpabook.ch07.domain.jointable.OneToManyJoinChild</class>
+    <class>com.jpabook.ch07.domain.jointable.OneToOneJoinParent</class>
+    <class>com.jpabook.ch07.domain.jointable.OneToOneJoinChild</class>
 
     <properties>
       <!-- 필수 속성 -->
       <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
       <property name="jakarta.persistence.jdbc.user" value="sa"/>
       <property name="jakarta.persistence.jdbc.password" value=""/>
-      <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/jpashop"/>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test"/>
       <!-- 방언(dialect) 설정 -->
       <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
 

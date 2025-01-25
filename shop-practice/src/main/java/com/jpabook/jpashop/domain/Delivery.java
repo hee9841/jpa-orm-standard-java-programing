@@ -13,7 +13,7 @@ import lombok.Setter;
 
 @Getter
 @Entity
-public class Delivery {
+public class Delivery extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "DELIVERY_ID")
