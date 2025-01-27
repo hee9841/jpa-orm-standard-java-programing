@@ -1,5 +1,7 @@
 package com.jpabook.jpashop.domain;
 
+import static jakarta.persistence.FetchType.LAZY;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -14,11 +16,12 @@ import lombok.Setter;
 @Getter
 @Entity
 public class Delivery extends BaseEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "DELIVERY_ID")
     private Long id;
-    
+
     private String city;
 
     private String street;
@@ -30,7 +33,7 @@ public class Delivery extends BaseEntity {
 
     //양방향
     @Setter
-    @OneToOne(mappedBy = "delivery")
+    @OneToOne(fetch = LAZY, mappedBy = "delivery")
     private Order order;
 
 
