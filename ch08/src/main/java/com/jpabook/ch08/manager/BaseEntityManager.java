@@ -20,7 +20,9 @@ public class BaseEntityManager {
             }
             e.printStackTrace();
         } finally {
-            em.close();
+            if (em.isOpen()) {
+                em.close();
+            }
         }
     }
 }

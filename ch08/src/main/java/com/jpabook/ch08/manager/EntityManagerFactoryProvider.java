@@ -5,7 +5,10 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 import lombok.Getter;
 
+
 public class EntityManagerFactoryProvider {
+
+//    @Getter(AccessLevel.PROTECTED)
     @Getter
     private static final EntityManagerFactory emf;
 
@@ -13,7 +16,7 @@ public class EntityManagerFactoryProvider {
     }
 
     static {
-        emf = Persistence.createEntityManagerFactory("08");
+        emf = Persistence.createEntityManagerFactory("ch08");
 
         Runtime.getRuntime().addShutdownHook(new Thread(EntityManagerFactoryProvider::closeEnf) );
     }
