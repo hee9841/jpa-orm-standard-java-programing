@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.0"
+  xmlns="https://jakarta.ee/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+  <persistence-unit name="ch09">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+    <properties>
+      <!-- 필수 속성 -->
+      <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/>
+      <property name="jakarta.persistence.jdbc.user" value="sa"/>
+      <property name="jakarta.persistence.jdbc.password" value=""/>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test"/>
+      <!-- 방언(dialect) 설정 -->
+      <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+
+      <!-- 옵션 -->
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="hibernate.use_sql_comments"  value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="create" />
+      <property name="hibernate.jdbc.batch_size" value="10"/>
+
+      <!-- 플록시 객체, 필드 접근 방식 식별자 메서드 호출 시 초기화 관련 설정 -->
+      <!-- JPA 명세와 다르게 하이버네이트는 식별자를 호출할 때 엔티티를 초기화 하지 않음 -->
+      <!-- 따라서 아래 설정을 true 해줘야함 초기화하는 결과를 볼 수 있음-->
+      <!--hibernate.jpa.compliance.proxy 를 true 설정했는데 5.2 버전부터 jpa 표준을 따르도록 바꿔서 해당 설정 없어짐-->
+
+    </properties>
+  </persistence-unit>
+</persistence>
