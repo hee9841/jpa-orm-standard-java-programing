@@ -3,6 +3,7 @@ package com.jpabook.jpashop.domain;
 import static jakarta.persistence.FetchType.LAZY;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -22,11 +23,8 @@ public class Delivery extends BaseEntity {
     @Column(name = "DELIVERY_ID")
     private Long id;
 
-    private String city;
-
-    private String street;
-
-    private String zipCode;
+    @Embedded
+    private Address address;
 
     @Enumerated(EnumType.STRING)
     private DeliveryStatus status;

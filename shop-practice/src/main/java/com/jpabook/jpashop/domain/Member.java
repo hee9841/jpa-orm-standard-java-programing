@@ -2,6 +2,7 @@ package com.jpabook.jpashop.domain;
 
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,11 +23,10 @@ public class Member extends BaseEntity {
     @Column(name = "MEMBER_ID")
     private Long id;
     private String name;
-    private String city;
-    private String street;
-    private String zipcode;
+
+    @Embedded
+    private Address address;
 
     @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<Order>();
-
 }

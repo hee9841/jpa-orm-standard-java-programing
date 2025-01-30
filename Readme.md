@@ -17,3 +17,4 @@
 - ### [Chapter 06 다양한 연관관계 매핑]( https://github.com/hee9841/jpa-orm-standard-java-programing/tree/master/summary/ch06 )
 - ### [Chapter 07 고급 매핑]( https://github.com/hee9841/jpa-orm-standard-java-programing/tree/master/summary/ch07 )
 - ### [Chapter 08 프록시와 연관관계 관리]( https://github.com/hee9841/jpa-orm-standard-java-programing/tree/master/summary/ch08 )
+- ### [Chapter 09 값 타입]( https://github.com/hee9841/jpa-orm-standard-java-programing/tree/master/summary/ch09 )
